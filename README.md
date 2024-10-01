@@ -82,7 +82,7 @@ You now have a self-contained environment ready for writing Flask code. VS Code 
     "configurations": [
         {
             "name": "Python: Flask",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "flask",
             "env": {
