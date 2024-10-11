@@ -11,11 +11,11 @@ permissions:
   id-token: write
 
 env:
-  BACKEND_WEBAPP_DEV: aguadamillas-be-dev
+  BACKEND_WEBAPP_DEV: drosel-be-dev
 
 jobs:
   build:
-    
+
     runs-on: ubuntu-latest
     env:
       ENV: ghci
@@ -47,7 +47,7 @@ jobs:
       with:
         name: python-app
         path: |
-          . 
+          .
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,7 +62,7 @@ jobs:
       with:
         name: python-app
         path: .
-    
+
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -73,4 +73,3 @@ jobs:
       with:
         app-name: ${{ env.BACKEND_WEBAPP_DEV }}
         package: .
-    
