@@ -26,6 +26,7 @@ This source code works under the following technologies:
 - [Flask 2.2.2](https://pypi.org/project/Flask/2.2.2/)
 - [Flask-Cors 3.0.10](https://pypi.org/project/Flask-Cors/3.0.10/)
 - [Flask-SQLAlchemy 2.5.1](https://pypi.org/project/Flask-SQLAlchemy/2.5.1/)
+- [PostgreSQL 16](https://www.postgresql.org/download/)
 - [psycopg2 2.9.7](https://pypi.org/project/psycopg2/)
 - [python-dotenv 0.21.0](https://pypi.org/project/python-dotenv/0.21.0/)
 - [SQLAlchemy 1.4.41](https://pypi.org/project/SQLAlchemy/1.4.41/)
@@ -82,7 +83,7 @@ You now have a self-contained environment ready for writing Flask code. VS Code 
     "configurations": [
         {
             "name": "Python: Flask",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "flask",
             "env": {
