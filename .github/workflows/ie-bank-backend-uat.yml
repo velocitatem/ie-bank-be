@@ -1,7 +1,6 @@
 name: ie-bank-backend-uat
 
 on:
-  push:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
