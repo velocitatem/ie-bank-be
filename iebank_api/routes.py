@@ -38,7 +38,8 @@ def get_accounts():
 @app.route('/accounts/<int:id>', methods=['GET'])
 def get_account(id):
     account = Account.query.get(id)
-    return format_account(account)
+    # return 404 if not found
+    return format_account(account) if account else ('', 404)
 
 @app.route('/accounts/<int:id>', methods=['PUT'])
 def update_account(id):
@@ -55,6 +56,8 @@ def delete_account(id):
     return format_account(account)
 
 def format_account(account):
+    if not account:
+        return {};
     return {
         'id': account.id,
         'name': account.name,
