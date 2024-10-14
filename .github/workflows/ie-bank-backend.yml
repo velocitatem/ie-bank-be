@@ -61,7 +61,6 @@ jobs:
       with:
         name: python-app
         path: .
-
     - uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
