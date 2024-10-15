@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 env:
-  BACKEND_WEBAPP_UAT: drosel-be-uat-temp
+  BACKEND_WEBAPP_UAT: drosel-be-uat
 
 jobs:
   build:
